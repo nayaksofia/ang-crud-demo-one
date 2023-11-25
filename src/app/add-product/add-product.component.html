@@ -1,5 +1,39 @@
 <h2>Add Product::</h2>
-<form #productForm="ngForm">
+
+<!-- Form Type-1 -->
+<div>
+    <label>ID:</label>
+    <input type="number" [(ngModel)]="id"/>  <!--binding with the field in .ts file--> 
+</div>
+
+<br>
+
+<div>
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="name"/>
+</div>
+
+<br>
+
+<div>
+    <label>Order Date:</label>
+    <input type="date" [(ngModel)]="orderdate"/>
+</div>
+
+<br>
+
+<div>
+    <label>Order Time:</label>
+    <input type="time" [(ngModel)]="ordertime"/>
+</div>
+
+<br>
+
+<button (click)="addProduct()">Add Product</button>
+
+<!--Form Type-2-->
+
+<!-- <form #productForm="ngForm">
     <div>
         <label>ID</label>
         <input type="number" [(ngModel)]="id" name="id" required />
@@ -24,37 +58,6 @@
     
 
     <button type="button" (click)="addProduct()"  [disabled]="productForm.invalid">Add Product</button>
-</form>
+</form> -->
 
 <h5>{{message}}</h5>
-
-
-
-
-<!-- Form Type-1 -->
-<!-- <h1>{{message}}</h1>
-<h2>Add Product</h2>
- 
-<div>
-    <label>ID:</label>
-    <input type="number" [(ngModel)]="id"/>
-</div>
-<br>
-<div>
-    <label>Name:</label>
-    <input type="text" [(ngModel)]="name"/>
-</div>
-<br>
-<div>
-    <label>Order Date:</label>
-    <input type="date" [(ngModel)]="orderdate"/>
-</div>
-<br>
-<div>
-    <label>Order Time:</label>
-    <input type="time" [(ngModel)]="ordertime"/>
-</div>
-<br>
-<button (click)="addProduct()">Add Product</button>
-
- -->

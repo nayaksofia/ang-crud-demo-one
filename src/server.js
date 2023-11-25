@@ -97,7 +97,7 @@ app.put('/updateProduct', (req,res)=>{
        
     });
 
-//deletion of product
+//deletion of product by id
 app.delete('/deleteProduct/:id',(req,res)=> {
     const id=req.params.id;
     const sql='delete from product where id = ?';

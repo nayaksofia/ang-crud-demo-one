@@ -5,19 +5,22 @@
         <th>ID</th>
         <th>Name</th>
         <th>Order Date</th>
+        <th>Order Time</th>
         <th>Edit Action</th>
         <th>Delete Action</th>
     </tr>
 
     <tr *ngFor="let product of products">
-       <td>{{product.id}}</td>
-       <td>{{product.name}}</td>
-       <td>{{product.orderdate}}</td>
-       <td>{{product.ordertime}}</td>
-       <td><button routerLink="/'edit/{{product.id}}">Edit</button></td>     <!--Open an new webpage-->
-       <td><button (click)="deleteProduct(product.id)">Delete</button></td>    <!--Delete is an action, so we declare function-->
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <!-- <td>{{product.orderdate}} -->
+        <td>{{product.orderdate | date:'dd/MM/yy'}}</td> <!-- Using pipe(|) and put the date format -->
+        <td>{{product.ordertime}}</td>
+        <td><button routerLink="/edit/{{product.id}}">Edit</button></td> <!--Open an new webpage-->
+        <td><button (click)="deleteProduct(product.id)">Delete</button></td>
+        <!--Delete is an action, so we declare it as function, where we pass the object-->
     </tr>
 
 </table>
 
-{{message}}
+{{message}}  <!--Message for deleting product, display in the webpage-->

@@ -6,8 +6,7 @@ import { AppComponent } from './app.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
-import {RouterModule,Routes} from '@angular/router'
-//import { Routes } from '@angular/router';  //import routes
+import {RouterModule,Routes} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import {HttpClient, HttpClientModule } from '@angular/common/http';
 

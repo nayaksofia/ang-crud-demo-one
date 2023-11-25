@@ -1,1 +1,35 @@
-<p>edit-product works!</p>
+<h2>Edit Product::</h2>
+
+<!-- Form Type-1 -->
+<div>
+    <label>ID:</label>
+    <input type="number" [(ngModel)]="id" [disabled]="true" /> <!--binding with the field in .ts file-->
+</div>
+
+<br>
+
+<div>
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="name" />
+</div>
+
+<br>
+
+<div>
+    <label>Order Date:</label>
+    <input type="date" [(ngModel)]="orderdate" />
+</div>
+
+<br>
+
+<div>
+    <label>Order Time:</label>
+    <input type="time" [(ngModel)]="ordertime" />
+</div>
+
+<br>
+
+<button (click)="updateProduct()">Update Product</button>
+
+
+<!-- {{message}} To display message on the webpage -->
